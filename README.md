@@ -1,10 +1,10 @@
 # Chunky poster
 
-![CircleCI](https://img.shields.io/circleci/build/github/puresyntax71/hugo-theme-chunky-poster)
+[![CircleCI](https://img.shields.io/circleci/build/github/puresyntax71/hugo-theme-chunky-poster)](https://circleci.com/gh/puresyntax71/hugo-theme-chunky-poster/tree/master)
 
 A simple, bootstrap 4 based blog theme. The structure and design is based on the [Prisma blog](https://www.prisma.io/blog/).
 
-[Demo](https://hugo-theme-chunky-poster.netlify.com)
+[Demo](https://hugo-theme-chunky-poster.netlify.com) | [Demo 2](https://themes.gohugo.io/theme/hugo-theme-chunky-poster)
 
 # Screenshot
 
@@ -23,7 +23,7 @@ A simple, bootstrap 4 based blog theme. The structure and design is based on the
 # Usage
 
 ```shell
-git clone https://gitlab.com/virtualcursor/chunky-poster.git
+git clone https://github.com/puresyntax71/hugo-theme-chunky-poster.git
 ```
 
 Check out the configuration at [`exampleSite/config.toml`](exampleSite/config.toml) for configuring your Hugo site.
@@ -68,17 +68,13 @@ The first image on the list will be used as the "cover" image on a post.
 
 ## Prism
 
-Configure [Prism](https://prismjs.com/) under `[params.prismJS]`. Set `enable` to `true` and **disable `codeFences`**. Change the theme under `theme`.
+Configure [Prism](https://prismjs.com/) under `[params.prismJS]` and set `enable` to `true`. Change the theme under `theme`.
 
 ```toml
 [params]
   [params.prismJS]
     enable = true
     theme = "okaidia"
-
-[markup]
-  [markup.highlight]
-    codeFences = false
 ```
 
 ## Commento
@@ -89,7 +85,7 @@ Configure [Commento](https://commento.io/) under `[params.commento]`. Set `enabl
 [params]
   [params.commento]
     enable = true
-    theme = "https://somename.commento.io"
+    url = "https://somename.commento.io"
 ```
 
 ## Share
@@ -115,9 +111,13 @@ The image gallery feature uses the [`ekko-lightbox`](https://github.com/ashleydw
 
 Fork the project and run `yarn watch` during development.
 
+> The project has an `.nvmrc` if you wish to use [`nvm`](https://github.com/nvm-sh/nvm).
+
 The application javascript file is located at `src/js/app.js`.
 
 For customizing SCSS, the main entrypoint is at `src/scss/style.scss`. Bootstrap variables can be overridden in the `_variables.scss` file. The theme's styles are located at `src/scss/chunky-poster.scss`.
+
+For production, you can run `yarn build` for the assets to be updated.
 
 # Credits
 

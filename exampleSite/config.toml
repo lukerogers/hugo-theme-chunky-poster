@@ -8,6 +8,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 googleAnalytics = "UA-XXXX"
 DisqusShortname = ""
+theme = "hugo-theme-chunky-poster"
 
 [menu]
   [[menu.main]]
@@ -31,7 +32,13 @@ author = "authors"
   author = "Hugo Authors"
   description = "Lorem ipsum dolor sit amet."
   homepageImage = "/images/homepage-image.jpg"
+  dateFormat = "January 2, 2006"
   share = true
+  showLanguageSwitcher = false
+
+  # Custom CSS and JS. Relative to /static/css and /static/js respectively.
+  customCSS = []
+  customJS = []
 
   [params.social]
     rss = true
